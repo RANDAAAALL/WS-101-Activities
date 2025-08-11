@@ -1,7 +1,5 @@
-
 _number_items_sold = 0
 _total_sales_today = 0
-_index = 0
 
 _items_prices = {
     1: ("Pandesal", 5.00),
@@ -14,9 +12,11 @@ print("--Welcome to our Small Bakery--")
 print("What do you want for today?")
 
 for _index in _items_prices:
+    # print("Index Before: ", _index)
     print(f"[{_index}]: {_items_prices[_index][0]} - ₱{_items_prices[_index][1]:.2f}")
     
     while _index > 4:
+        #  print("Index Right Now: ", _index)
          print("\nInstructions: Please type the number of your choice: 1, 2, 3, 4 or 5 only!")
          _customer_choice = input("Customer: ")
 
@@ -35,8 +35,7 @@ for _index in _items_prices:
          print("[2]: No")
          _customer_final_thoughts = int(input("Customer: "))
          
-         if _customer_final_thoughts == 1:
-            index = 0
+         if _customer_final_thoughts == 1: continue
          else:
             print("Thank you for visiting our bakery!")
             break
